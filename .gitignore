@@ -1,0 +1,6 @@
+__pycache__/
+.git/
+*.sw[op]
+.env
+*.session
+*.sqlite
