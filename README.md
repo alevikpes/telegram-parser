@@ -6,7 +6,7 @@ the currently logged in user.
 At the moment it can: 
 - get all the groups, where the user is subscribed 
 - get a list of users of some of those groups.
-- send send message to all users from Database
+- send message to all users from Database
 
 This script cannot get the users
 of any group due to some kind of restrictions, which the group admins
