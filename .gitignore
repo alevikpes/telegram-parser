@@ -1,5 +1,7 @@
 __pycache__/
 .git/
+venv/
+
 *.sw[op]
 .env
 *.session
