@@ -46,7 +46,7 @@ the files, which have the credentials stored.
 Create a file `.env` and save there the **API ID**, the **API HASH**,
 the **bot name**, the **bot token**, a **database name** (can be any),
 a **session name** (can be any) and, possibly, other required data in
-the following format:
+the following format (see `env.example`):
 ```
 APP_API_HASH=<your api hash>
 APP_API_ID=<your api id>
@@ -63,31 +63,25 @@ TG_BOT_TOKEN=<bot token>
 user application nor your bot. Also add to the ignore list of your VCS,
 the files, which have the credentials stored.
 
-##### Virtual environment
-Create a python virtual environment (search online about how to do it
-for your OS). On Linux Debian distros it can be done with:
-```bash
-sudo apt install python3-venv -y
-python3 -m venv /path/to/virtual-environment
-```
-Start your virtual environment:
-```bash
-source /path/to/virtual-environment/bin/activate
-```
-Install the requirements:
-```bash
-pip3 install -r requirements.txt
-```
-
 
 ##### Initialisation
-Run `init.py` file:
+Make sure you are in the root of your project's directory, since the following steps will
+create necessary directories and files. Make file `init-project.bash` an
+executable:
 ```bash
-python3 init.py
+sudo chmod +x init-project,bash  # needs to be done once
 ```
-This will create an sqlite database file with two tables `group` and `user`.
-The name of the file will be read from the `.env` file. See `init.py` for
-more details.
+The above setup only needs to be done once.
+
+##### Starting the project
+Every time you want to start your project just run the file:
+```bash
+./init-project.bash
+```
+This will populate the environment variables from the `.env` file and
+create an sqlite database file with two tables `group` and `user`, if it
+doesn't exist yet. The name of the file will be read from the environment
+variable **DB_NAME**. See `init.py` for more details.
 
 
 ### Parsing
@@ -101,15 +95,15 @@ source /path/to/virtual-environment/bin/activate
 
 Run `main.py` to start the parsing:
 ```bash
-python3 main.py
+python main.py
 ```
 The script will parse the channels
-and save their info and the data of the participants of those channels into the
-database.
+and save their info and the data of the participants of those channels into
+the database.
 
 In order to parse only one channel, use -g optional argument with the cahnnel
 `username` (the name which starts with `@` symbol and can be found in the
 channel info page, specifying `@` is not necessary):
 ```bash
-python3 main.py -g <channel username>
+python main.py -g <channel username>
 ```
