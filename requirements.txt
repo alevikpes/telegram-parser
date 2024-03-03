@@ -22,7 +22,7 @@ pytest==5.2.2
 requests==2.22.0
 rsa==4.0                  # via telethon
 six==1.12.0               # via packaging, pathlib2
-telethon==1.10.8
+telethon==1.33.0
 urllib3==1.25.6           # via requests
 wcwidth==0.1.7            # via pytest
 zipp==0.6.0               # via importlib-metadata
