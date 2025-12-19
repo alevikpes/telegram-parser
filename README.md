@@ -1,6 +1,11 @@
 [![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg)](https://stand-with-ukraine.pp.ua)
 
 
+## Learn more about Russian agression against Ukraine
+
+[![Russian agression against Ukraine](https://war-sanctions.gur.gov.ua/resources/images/logo-ws.svg)](https://war-sanctions.gur.gov.ua/)
+
+
 # telegram-bot
 
 This script logs in as a user and can perform actions on behalf of
