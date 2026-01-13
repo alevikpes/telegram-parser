@@ -11,8 +11,12 @@
 This script logs in as a user and can perform actions on behalf of
 the currently logged in user.
 
-At the moment it can get all the groups, where the user is subscribed and get
-a list of users of some of those groups. This script cannot get the users
+At the moment it can: 
+- get all the groups, where the user is subscribed 
+- get a list of users of some of those groups.
+- send message to all users from Database
+
+This script cannot get the users
 of any group due to some kind of restrictions, which the group admins
 place for in the groups.
 
@@ -117,4 +121,20 @@ In order to parse only one channel, use -g optional argument with the cahnnel
 channel info page, specifying `@` is not necessary):
 ```bash
 python3 main.py -g <channel username>
+```
+
+### Sender
+This sript send messages all users which you parsed early.
+
+Run `send.py` to start send:
+```bash
+python3 sendBulk.py --message <Message which will be send> --delete --timeout 5
+```
+
+Options
+```
+  -h, --help,            show this help message and exit
+  -m, --message, required Text message which will be send to user
+  -d, --delete          Delete user from DB after send message
+  -t, --timeout Timeout between send messages in seconds
 ```
